@@ -68,12 +68,12 @@ void display(int nr,int nc,int arr[nr][nc])
 
 void sum(int ar,int ac,int Arr[ar][ac],int br,int bc,int Brr[br][bc], int Crr[ar][ac])
 {
-    int i,j;
+   
     if((ar==br)&&(bc==ac))
     {
-        for(i=0;i<ar;i++)
+        for(int i=0;i<ar;i++)
         {
-            for(j=0;j<ac;j++)
+            for(int j=0;j<ac;j++)
             {
                 Crr[i][j]=Arr[i][j]+Brr[i][j];
             }
