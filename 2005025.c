@@ -2,11 +2,11 @@
 void fill(int nr,int nc,int arr[nr][nc]);
 void display(int nr,int nc,int arr[nr][nc]);
 void sum(int ar,int ac,int Arr[ar][ac],int br,int bc,int Brr[br][bc], int Crr[ar][ac]);
-int trace(int nr,int nc,int Trr[nr][nc],int res);
+int trace(int nr,int nc,int Trr[nr][nc]);
 
 main()
 {
-    int Ac,Ar,Bc,Br,op,res;
+    int Ac,Ar,Bc,Br,op;
     printf("Enter the number of rows and number of columns of Matrix-A");
     scanf("%d%d",&Ac,&Ar);
     printf("Enter the number of rows and number of columns of Matrix-B");
@@ -30,11 +30,11 @@ main()
     }
     else if(op==2)
     {
-        trace(Ar,Ac,Arr,res);
+        trace(Ar,Ac,Arr);
     }
     else if(op==3)
     {
-        trace(Br,Bc,Brr,res);
+        trace(Br,Bc,Brr);
     }
 }
 }
@@ -42,10 +42,9 @@ main()
 
 void fill(int nr,int nc,int arr[nr][nc])
 {
-    int i,j;
-    for(i=0;i<nr;i++)
+    for(int i=0;i<nr;i++)
     {
-        for(j=0;j<nc;j++)
+        for(int j=0;j<nc;j++)
         {
             printf("Enter the %d %d element of array\n=",i,j);
             scanf("%d",&arr[i][j]);
@@ -55,10 +54,9 @@ void fill(int nr,int nc,int arr[nr][nc])
 
 void display(int nr,int nc,int arr[nr][nc])
 {
-    int i,j;
-    for(i=0;i<nr;i++)
+    for(int i=0;i<nr;i++)
     {
-        for(j=0;j<nc;j++)
+        for(int j=0;j<nc;j++)
         {
             printf("%d\t",arr[i][j]);
         }
@@ -87,11 +85,11 @@ void sum(int ar,int ac,int Arr[ar][ac],int br,int bc,int Brr[br][bc], int Crr[ar
 }
 
 
-int trace(int nr,int nc,int Trr[nr][nc],int res)
+int trace(int nr,int nc,int Trr[nr][nc])
 {
     if(nr==nc)
     {int i,j;
-    res=0;
+    int res=0;
         for(i=0;i<nr;i++)
         {
             for(j=0;j<nc;j++)
