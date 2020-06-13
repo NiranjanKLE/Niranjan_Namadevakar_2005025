@@ -6,7 +6,7 @@ int trace(int nr,int nc,int Trr[nr][nc],int res);
 
 main()
 {
-    int Ac,Ar,Bc,Br,op,Trs,res;
+    int Ac,Ar,Bc,Br,op,res;
     printf("Enter the number of rows and number of columns of Matrix-A");
     scanf("%d%d",&Ac,&Ar);
     printf("Enter the number of rows and number of columns of Matrix-B");
@@ -30,11 +30,11 @@ main()
     }
     else if(op==2)
     {
-        Trs=trace(Ar,Ac,Arr,res);
+        trace(Ar,Ac,Arr,res);
     }
     else if(op==3)
     {
-        Trs=trace(Br,Bc,Brr,res);
+        trace(Br,Bc,Brr,res);
     }
 }
 }
